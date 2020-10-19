@@ -1,0 +1,12 @@
+gamerule disableElytraMovementCheck true
+gamerule keepInventory true
+gamerule mobGriefing false
+gamerule doInsomnia false
+gamerule doMobSpawning false
+gamerule doEntityDrops false
+gamerule doMobLoot false
+gamerule doTileDrops false
+gamerule doDaylightCycle false
+gamerule doFireTick false
+gamerule doDaylightCycle false
+gamerule commandBlockOutput false
