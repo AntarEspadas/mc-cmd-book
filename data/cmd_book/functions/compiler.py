@@ -6,7 +6,7 @@ def main():
 
     folder = os.path.dirname(__file__)
 
-    COMMAND = 'replaceitem entity @s weapon.offhand written_book{author:"Naratna", title:"Commands", pages:%s} 1'
+    COMMAND = 'item replace entity @s weapon.offhand with written_book{author:"Naratna", title:"Commands", pages:%s} 1'
     with open(os.path.join(folder,"pages.json")) as pages:
         pages_json = json.load(pages)
 
