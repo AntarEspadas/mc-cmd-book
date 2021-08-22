@@ -22,9 +22,9 @@ def main():
                     item = tooltip.split(" ")[2]
                     line["hoverEvent"] = {
                         "action": "show_item",
-                        "contents": [{"id": item}]
+                        "contents": {"id": item}
                     }
-                    return
+                    continue
                 
                 if "[Clear]" in line["text"]:
                     tooltip = "/clear"
@@ -37,7 +37,9 @@ def main():
 
     pages_json = [json.dumps(obj) for obj in pages_json]
     
-    with open(os.path.join(folder,"give.mcfunction"), "w") as give:
+    give_path = os.path.join(folder,"give.mcfunction")
+    print(os.path.abspath(give_path))
+    with open(give_path, "w") as give:
         give.write(COMMAND % pages_json)
 
 if __name__ == "__main__":
