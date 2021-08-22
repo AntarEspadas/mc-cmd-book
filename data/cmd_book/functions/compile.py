@@ -16,16 +16,21 @@ def main():
             break
         for line in obj["extra"]:
             try:
-                contents = line["clickEvent"]["value"]
-                action = "show_text"
+                tooltip = line["clickEvent"]["value"]
+                
+                if "/give" in tooltip:
+                    item = tooltip.split(" ")[2]
+                    line["hoverEvent"] = {
+                        "action": "show_item",
+                        "contents": [{"id": item}]
+                    }
+                    return
+                
                 if "[Clear]" in line["text"]:
-                    contents = "/clear"
-                elif "/give" in contents:
-                    action = "show_item"
-                    contents = contents.split(" ")[2]
+                    tooltip = "/clear"
                 line["hoverEvent"] = {
-                    "action":action,
-                    "contents": contents
+                    "action": "show_text",
+                    "contents": [{"text": tooltip}]
                 }
             except KeyError:
                 pass

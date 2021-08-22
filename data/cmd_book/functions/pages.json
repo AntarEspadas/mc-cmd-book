@@ -23,7 +23,7 @@
     {"text":"\n -Debug Stick","color":"gold","bold":true,"clickEvent":{"action":"run_command","value":"/give @s debug_stick"}},
     {"text":"\n\n [Clear]","color":"gray","underline":true,"clickEvent":{"action":"run_command","value":"/function cmd_book:clear"}},
     {"text":"        "},
-    {"text":"[Reload]","color":"dark_purple","underline":true,"clickEvent":{"action":"run_command","value":"/reload"},"hoverEvent":{"action":"show_text", "contents":"UwU"}}
+    {"text":"[Reload]","color":"dark_purple","underline":true,"clickEvent":{"action":"run_command","value":"/reload"}}
     ]}
     
     ]
