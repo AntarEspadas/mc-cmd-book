@@ -8,5 +8,5 @@ gamerule doMobLoot false
 gamerule doTileDrops false
 gamerule doDaylightCycle false
 gamerule doFireTick false
-gamerule doDaylightCycle false
 gamerule commandBlockOutput false
+gamerule doWeatherCycle false
